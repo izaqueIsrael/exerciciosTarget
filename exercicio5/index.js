@@ -1,9 +1,14 @@
-const stringOriginal = "hello world";
-let stringInvertida = "";
+const readline = require('readline').createInterface({ input: process.stdin, output: process.stdout });
 
-for (let i = stringOriginal.length - 1; i >= 0; i--) {
-  stringInvertida += stringOriginal[i];
-}
+readline.question('Digite a string que deseja inverter: ', stringOriginal => {
+  let stringInvertida = "";
 
-console.log(`String original: ${stringOriginal}`);
-console.log(`String invertida: ${stringInvertida}`);
+  for (let i = stringOriginal.length - 1; i >= 0; i--) {
+    stringInvertida += stringOriginal[i];
+  }
+
+  console.log(`String original: ${stringOriginal}`);
+  console.log(`String invertida: ${stringInvertida}`);
+
+  readline.close();
+});
